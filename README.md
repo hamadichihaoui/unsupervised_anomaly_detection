@@ -1,6 +1,6 @@
 # unsupervised_anomaly_detection
 
-## Existing approaches 
+## Existing Approaches 
 
 We can classify the existing approaches for "unsupervised" anomaly/outlier detection based on (at least) two criterias:
 
@@ -25,18 +25,19 @@ Note that to the best of my knowledge, there is no existing approach that tackle
 ## UFDGAN 
 #### Assumptions: 
 - Contaminated training set 
+- Fault detection (not OoDD)
 - The fault percentage is known
 
-#### Why based on the unsupervised contrastive learning will not work?
+#### Why the problem is quasi unsolvobale even for a human?
+let's take the MTSD dataset as an example. As shown in the bellow figure, (a) is a sample of the majority normal samples, (b) is a sample of a minority normal data and (c) is a sample of a the faulty samples (also a minority). So, the dataset is composed of multi modal data, but only one mode is labaled as anomaly. 
 
-The dataset is composed of multi modal data, but only one mode is labaled as anomaly. If the dataset is to a human, he will not be able to the anomaly exactly.
-For that, the 
+If the dataset is handed to a human, he most likely will not be able to correctly detect the anomalous samples.
 
 <p align="center">
 <img src="assets/training_samples.JPG" alt="drawing" width="100%" height="100%"/>
 </p>
 
-So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being . To guarantee the , the training dataset is only composed of two salient modes.  
+So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being. And in order to be solvobale, the data distribution should be exactly a mixture of ONLY two salient modes, which may rarely be the case for real world data.
 
 ## Out Of Distribution Detection through GAN's Mode Collapse
 
