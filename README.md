@@ -9,14 +9,15 @@ We can classify the current approaches for anomaly detection based on two
     - Uncontaminated dataset: The training data contains only normal samples. The methods that take this assumption are also refered weakly supervised approaches.
 
 - Type of the training dataset:
-
-
-
+<p align="center">
+<img src="assets/datasets.JPG" alt="drawing" width="100%" height="100%"/>
+</p>
+the anamolous samples  lie far away from the training distribution, is known is as out of distribution detection (OOD)
 
 Based on the type of the dataset we, out of distribution detection (OOD) and fault detection (FD).
 For the problem of fault detection, the image can be also segmented and the while this can be for the out of disribution detection.
 
-There is no existing method that take contaminated dataset and tackles the problem of fault detection.s
+There is no existing method that take contaminated dataset and tackles the problem of fault detection.
 
 ## UFDGAN 
 #### Assumptions: 
@@ -43,6 +44,10 @@ We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of 
 
 [CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances.](https://arxiv.org/pdf/2007.08176.pdf)
 
-#### 
+#### Model
+
+<p align="center">
+<img src="assets/model.JPG" alt="drawing" width="100%" height="100%"/>
+</p>
 
 ### Dataset
