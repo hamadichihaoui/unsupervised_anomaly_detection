@@ -5,11 +5,14 @@
 We can classify the existing approaches for "unsupervised" anomaly detection based on (at least) two criterias:
 
 - The "contamination" of the training dataset
-    Based on the used dataset in the training dataset
+
+    Based on this criteria, each approach will assume one of the following:
+
     - Contaminated dataset: the training dataset contains both normal and anamolous elements. 
     - Uncontaminated dataset: The training dataset contains only normal samples. The methods that take this assumption are also refered weakly supervised approaches.
 
 - How far is the distribution of the anomalous samples to the normal samples
+
 <p align="center">
 <img src="assets/datasets.JPG" alt="drawing" width="80%" height="50%"/>
 </p>
