@@ -9,7 +9,7 @@ We can classify the existing approaches for "unsupervised" anomaly/outlier detec
     Based on this criteria, each approach will assume one of the following:
 
     - Contaminated dataset: the training dataset contains both normal and anamolous elements. 
-    - Uncontaminated dataset: The training dataset contains only normal samples. Such approach is also refered asweakly supervised.
+    - Uncontaminated dataset: The training dataset contains only normal samples. Such approach is also refered as weakly supervised.
 
 - How far is the distribution of the anomalous samples to the normal samples
 
@@ -20,7 +20,7 @@ We can classify the existing approaches for "unsupervised" anomaly/outlier detec
 <img src="assets/datasets.JPG" alt="drawing" width="80%" height="50%"/>
 </p>
 
-Note that to the best of my knowledge, there is no existing approach that tackles the problem of fault detection(FD)assuming a contaminated dataset.
+Note that to the best of my knowledge, there is no existing approach that tackles the problem of fault detection(FD) assuming a contaminated dataset.
 
 ## UFDGAN 
 #### Assumptions: 
@@ -28,7 +28,7 @@ Note that to the best of my knowledge, there is no existing approach that tackle
 - Fault detection (not OoDD)
 - The fault percentage is known
 
-#### Why the problem is quasi unsolvobale even for a human?
+#### Why the problem is quasi unsolvoble even for a human?
 let's take the MTSD dataset as an example. As shown in the figure bellow,
 - (a) is a sample of the majority normal samples
 - (b) is a sample of a minority normal data 
