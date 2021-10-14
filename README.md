@@ -13,13 +13,12 @@ We can classify the existing approaches for "unsupervised" anomaly/outlier detec
 
 - How far is the distribution of the anomalous samples to the normal samples
 
+    - If the anamolous samples lie far away from the normal distribution (as shown in (b)), the problem is known is as out of distribution detection (OoDD) . Note that OoDD is sometimes refered as a seperate problem and not included in the family of anomaly deteion, but here I will assume that the OoDD detection problem lies under the anomaly detection umberlla.
+
+    - On the other hand, if  the anamolous samples lie at the boundaries of normal distribution (as shown in (b)), the problem is known is as fault detection (FD)
 <p align="center">
 <img src="assets/datasets.JPG" alt="drawing" width="80%" height="50%"/>
 </p>
-
-     - If the anamolous samples lie far away from the normal distribution (as shown in (b)), the problem is known is as out of distribution detection (OoDD) . Note that OoDD is sometimes refered as a seperate problem and not included in the family of anomaly deteion, but here I will assume that the OoDD detection problem lies under the anomaly detection umberlla.
-
-     - On the other hand, if  the anamolous samples lie at the boundaries of normal distribution (as shown in (b)), the problem is known is as fault detection (FD)
 
 For the problem of fault detection, the image can be also segmented and the while this can be for the out of disribution detection.
 
