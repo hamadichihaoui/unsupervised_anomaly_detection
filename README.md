@@ -30,7 +30,7 @@ The dataset is composed of multi modal data, but only one mode is labaled as ano
 For that, the 
 
 <p align="center">
-<img src="assets/training_samples.JPG" alt="drawing" width="50%" height="50%"/>
+<img src="assets/training_samples.JPG" alt="drawing" width="100%" height="100%"/>
 </p>
 
 
@@ -47,7 +47,7 @@ We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of 
 #### Model
 
 <p align="center">
-<img src="assets/model.JPG" alt="drawing" width="100%" height="100%"/>
+<img src="assets/model.JPG" alt="drawing" width="50%" height="50%"/>
 </p>
 
 ### Dataset
