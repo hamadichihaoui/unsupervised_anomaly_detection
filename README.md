@@ -2,7 +2,7 @@
 
 ## Existing approaches 
 
-We can classify the existing approaches for "unsupervised" anomaly detection based on (at least) two criterias:
+We can classify the existing approaches for "unsupervised" anomaly/outlier detection based on (at least) two criterias:
 
 - The "contamination" of the training dataset
 
@@ -16,17 +16,18 @@ We can classify the existing approaches for "unsupervised" anomaly detection bas
 <p align="center">
 <img src="assets/datasets.JPG" alt="drawing" width="80%" height="50%"/>
 </p>
-the anamolous samples  lie far away from the training distribution, is known is as out of distribution detection (OoD)
+If the anamolous samples lie far away from the normal distribution (as shown in (b)), the problem is known is as out of distribution detection (OoDD) . Note that OoDD is sometimes refered as a seperate problem and not included in the family of anomaly deteion, but here I will assume that the OoDD detection problem lies under the anomaly detection umberlla.
 
-Based on the type of the dataset we, out of distribution detection (OoD) and fault detection (FD).
+On the other hand, if  the anamolous samples lie at the boundaries of normal distribution (as shown in (b)), the problem is known is as fault detection (FD)
+
 For the problem of fault detection, the image can be also segmented and the while this can be for the out of disribution detection.
 
-There is no existing method that take contaminated dataset and tackles the problem of fault detection.
+Note that to the best of my knowledge, there is no existing approach that tackles the problem of fault detection assuming a contaminated dataset.
 
 ## UFDGAN 
 #### Assumptions: 
 - Contaminated training set 
-- the anomaly percentage is known
+- The fault percentage is known
 
 #### Why based on the unsupervised contrastive learning will not work?
 
@@ -37,7 +38,7 @@ For that, the
 <img src="assets/training_samples.JPG" alt="drawing" width="100%" height="100%"/>
 </p>
 
-
+So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being . To guarantee the , the training dataset is only composed of two salient modes.  
 
 ## Out Of Distribution Detection through GAN's Mode Collapse
 
