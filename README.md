@@ -9,7 +9,7 @@ We can classify the existing approaches for "unsupervised" anomaly/outlier detec
     Based on this criteria, each approach will assume one of the following:
 
     - Contaminated dataset: the training dataset contains both normal and anamolous elements. 
-    - Uncontaminated dataset: The training dataset contains only normal samples. The methods that take this assumption are also refered weakly supervised approaches.
+    - Uncontaminated dataset: The training dataset contains only normal samples. Such approach is also refered asweakly supervised.
 
 - How far is the distribution of the anomalous samples to the normal samples
 
