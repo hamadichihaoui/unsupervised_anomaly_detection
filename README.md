@@ -29,7 +29,12 @@ Note that to the best of my knowledge, there is no existing approach that tackle
 - The fault percentage is known
 
 #### Why the problem is quasi unsolvobale even for a human?
-let's take the MTSD dataset as an example. As shown in the bellow figure, (a) is a sample of the majority normal samples, (b) is a sample of a minority normal data and (c) is a sample of a the faulty samples (also a minority). So, the dataset is composed of multi modal data, but only one mode is labaled as anomaly. 
+let's take the MTSD dataset as an example. As shown in the figure bellow,
+- (a) is a sample of the majority normal samples
+- (b) is a sample of a minority normal data 
+- (c) is a sample of a the faulty samples (also a minority)
+
+So, the dataset is composed of multi modal data, but only one mode is labaled as anomaly. 
 
 If the dataset is handed to a human, he most likely will not be able to correctly detect the anomalous samples.
 
