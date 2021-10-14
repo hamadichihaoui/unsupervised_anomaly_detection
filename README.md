@@ -2,19 +2,20 @@
 
 ## Existing approaches 
 
-We can classify the current approaches for anomaly detection based on two 
-- Degree of the supervision
+We can classify the existing approaches for "unsupervised" anomaly detection based on (at least) two criterias:
+
+- The "contamination" of the training dataset
     Based on the used dataset in the training dataset
-    - Contaminated dataset: it contains both normal and anamolous elements in the training. 
-    - Uncontaminated dataset: The training data contains only normal samples. The methods that take this assumption are also refered weakly supervised approaches.
+    - Contaminated dataset: the training dataset contains both normal and anamolous elements. 
+    - Uncontaminated dataset: The training dataset contains only normal samples. The methods that take this assumption are also refered weakly supervised approaches.
 
-- Type of the training dataset:
+- How far is the distribution of the anomalous samples to the normal samples
 <p align="center">
-<img src="assets/datasets.JPG" alt="drawing" width="50%" height="50%"/>
+<img src="assets/datasets.JPG" alt="drawing" width="80%" height="50%"/>
 </p>
-the anamolous samples  lie far away from the training distribution, is known is as out of distribution detection (OOD)
+the anamolous samples  lie far away from the training distribution, is known is as out of distribution detection (OoD)
 
-Based on the type of the dataset we, out of distribution detection (OOD) and fault detection (FD).
+Based on the type of the dataset we, out of distribution detection (OoD) and fault detection (FD).
 For the problem of fault detection, the image can be also segmented and the while this can be for the out of disribution detection.
 
 There is no existing method that take contaminated dataset and tackles the problem of fault detection.
@@ -35,7 +36,7 @@ For that, the
 
 
 
-## Out Of Distribution Detection using Mode Collapse
+## Out Of Distribution Detection through GAN's Mode Collapse
 
 We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of Out OF Distribution detection.
 
@@ -44,10 +45,12 @@ We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of 
 
 [CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances.](https://arxiv.org/pdf/2007.08176.pdf)
 
-#### Model
-
+#### Approach
+The model is composed of a GAN (generator and a discriminator), along with an encoder. and the encoder tries to learn the reverse mapping from the image space to the gan's latent space. After each iteration, based on the reconstruction error, the is filtered out. 
 <p align="center">
 <img src="assets/model.JPG" alt="drawing" width="50%" height="50%"/>
 </p>
 
 ### Dataset
+The MNIST dataset is used. The 0 is used as the normal and sampled from the different orher classes. the anomaly percentage is 5%.
+
