@@ -37,7 +37,7 @@ If the dataset is handed to a human, he most likely will not be able to correctl
 <img src="assets/training_samples.JPG" alt="drawing" width="100%" height="100%"/>
 </p>
 
-So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being. And in order to be solvobale, the data distribution should be exactly a mixture of ONLY two salient modes, which may rarely be the case for real world data.
+So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being. And in order to be solvoble, the data distribution should be exactly a mixture of ONLY two salient modes, which may rarely be the case in the real world.
 
 ## Out Of Distribution Detection through GAN's Mode Collapse
 
