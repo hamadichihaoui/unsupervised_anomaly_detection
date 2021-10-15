@@ -1,6 +1,6 @@
 # unsupervised_anomaly_detection
 
-## Existing Approaches 
+## How can we classify existing approaches?
 
 We can classify the existing approaches for "unsupervised" anomaly/outlier detection based on (at least) two criterias:
 
@@ -24,7 +24,7 @@ Note that to the best of my knowledge, there is no existing approach that tackle
 
 ## UFDGAN 
 
-#### Assumptions: 
+#### Assumptions
 - Contaminated training set 
 - Fault detection (not OoDD)
 - The fault percentage is known
@@ -44,7 +44,7 @@ So, the normal samples are in somehow "multi-modal". In this settings, it is cha
 
 So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being. And in order to be solvoble, the data distribution should be exactly a mixture of ONLY two salient modes, which may rarely be the case in the real world.
 
-#### Out of Distribution Detection instead of Fault detection
+#### Out of Distribution Detection instead of Fault Detection
 
 We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of OoDD.
 
