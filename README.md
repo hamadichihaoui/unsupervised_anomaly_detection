@@ -23,24 +23,38 @@ We can classify the existing approaches for "unsupervised" anomaly/outlier detec
 Note that to the best of my knowledge, there is no existing approach that tackles the problem of fault detection(FD) assuming a contaminated dataset.
 
 ## UFDGAN 
+
 #### Assumptions: 
 - Contaminated training set 
 - Fault detection (not OoDD)
 - The fault percentage is known
 
 #### Why the problem is quasi unsolvoble even for a human?
-let's take the MTSD dataset as an example. As shown in the figure bellow,
-- (a) is a sample of the majority normal samples
-- (b) is a sample of a minority within the normal data 
-- (c) is a sample of a the faulty data (also a minority)
-
-So, the dataset is composed of multi modal data, but only one mode is labaled as anomaly. 
-
-If the dataset is handed to a human, he most likely will not be able to correctly detect the anomalous samples.
+Let's take the MTSD dataset as an example. As shown in the figure bellow,
+- (a) is a sample of a majority pattern within the normal data
+- (b) is a sample of a minority pattern within the normal data 
+- (c) is a sample of a the faulty data (a minority)
 
 <p align="center">
 <img src="assets/training_samples.JPG" alt="drawing" width="100%" height="100%"/>
 </p>
 
+
+So, the normal samples are in somehow "multi-modal". In this settings, it is challenging even for a human to correctly detect the anomalous samples.
+
 So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being. And in order to be solvoble, the data distribution should be exactly a mixture of ONLY two salient modes, which may rarely be the case in the real world.
+
+#### Out of Distribution Detection instead of Fault detection
+
+We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of OoDD.
+
+#### Approach: OoDD through GAN's Mode Collapse
+The model is composed of a GAN (generator and a discriminator), along with an encoder. The encoder tries to learn the reverse mapping from the image space to the gan's latent space. The three models are trained jointly. At each iteration, based on the reconstruction error, the top p% samples with biggest reconstruction error (from the real data) are filtered out during training. As the training goes, and as the the idea is to benefit from one of GAN's biggest weaknesses, which is the mode collapse.
+
+<p align="center">
+<img src="assets/model.JPG" alt="drawing" width="50%" height="50%"/>
+</p>
+
+#### Dataset & Preleminary Results
+The MNIST dataset is used. The 0 is used as the normal class and randomly sampled elements from the different other classes as out of distribution data. The OoD percentage is 5%. A preliminary experiment gives a recall of 0.9 and accuracy of 0.98.
 
