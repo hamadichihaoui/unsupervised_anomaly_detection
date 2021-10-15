@@ -31,8 +31,8 @@ Note that to the best of my knowledge, there is no existing approach that tackle
 #### Why the problem is quasi unsolvoble even for a human?
 let's take the MTSD dataset as an example. As shown in the figure bellow,
 - (a) is a sample of the majority normal samples
-- (b) is a sample of a minority normal data 
-- (c) is a sample of a the faulty samples (also a minority)
+- (b) is a sample of a minority within the normal data 
+- (c) is a sample of a the faulty data (also a minority)
 
 So, the dataset is composed of multi modal data, but only one mode is labaled as anomaly. 
 
@@ -43,22 +43,4 @@ If the dataset is handed to a human, he most likely will not be able to correctl
 </p>
 
 So, I argue that the problem of unsupervised fault detection assuming a contaminated training dataset is challenging even for a human being. And in order to be solvoble, the data distribution should be exactly a mixture of ONLY two salient modes, which may rarely be the case in the real world.
-
-## Out Of Distribution Detection through GAN's Mode Collapse
-
-We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of Out OF Distribution detection.
-
-#### Recent Related Work
- [SSD: A unified framework for selfsupervised outlier detection.](https://arxiv.org/pdf/2103.12051.pdf).  
-
-[CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances.](https://arxiv.org/pdf/2007.08176.pdf)
-
-#### Approach
-The model is composed of a GAN (generator and a discriminator), along with an encoder. and the encoder tries to learn the reverse mapping from the image space to the gan's latent space. After each iteration, based on the reconstruction error, the is filtered out. 
-<p align="center">
-<img src="assets/model.JPG" alt="drawing" width="50%" height="50%"/>
-</p>
-
-### Dataset
-The MNIST dataset is used. The 0 is used as the normal and sampled from the different orher classes. the anomaly percentage is 5%.
 
