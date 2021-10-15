@@ -11,11 +11,11 @@ We can classify the existing approaches for "unsupervised" anomaly/outlier detec
     - Contaminated dataset: the training dataset contains both normal and anamolous elements. 
     - Uncontaminated dataset: The training dataset contains only normal samples. Such approach is also refered as weakly supervised.
 
-- How far is the distribution of the anomalous samples to the normal samples
+- How far is the distribution of the anomalous samples from the normal samples
 
-    - If the anamolous samples lie far away from the normal distribution (as shown in (b)), the problem is known is as out of distribution detection (OoDD) . Note that OoDD is sometimes refered as a seperate problem and not included in the family of anomaly deteion, but here I will assume that the OoDD detection problem lies under the anomaly detection umberlla.
+    - If the anamolous samples lie far away from the normal distribution (as shown in (b)), the problem is known is as out of distribution detection (OoDD) . Note that OoDD is sometimes refered as a seperate problem and not included in the family of anomaly detection, but here I will assume that the OoDD detection problem lies under the anomaly detection umberlla.
 
-    - On the other hand, if  the anamolous samples lie at the boundaries of normal distribution (as shown in (b)), I will refer to the problem as fault detection (FD).
+    - On the other hand, if  the anamolous samples lie at the boundaries of normal distribution (as shown in (a)), I will refer to the problem as fault detection (FD).
 <p align="center">
 <img src="assets/datasets.JPG" alt="drawing" width="80%" height="50%"/>
 </p>
@@ -29,7 +29,7 @@ Note that to the best of my knowledge, there is no existing approach that tackle
 - Fault detection (not OoDD)
 - The fault percentage is known
 
-#### Why the problem is quasi unsolvoble even for a human?
+#### Why the problem is challenging even for a human?
 Let's take the MTSD dataset as an example. As shown in the figure bellow,
 - (a) is a sample of a majority pattern within the normal data
 - (b) is a sample of a minority pattern within the normal data 
