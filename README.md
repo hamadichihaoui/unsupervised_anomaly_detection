@@ -2,7 +2,7 @@
 
 ## How can we classify existing approaches?
 
-We can classify the existing approaches for "unsupervised" anomaly/outlier detection based on (at least) two criterias:
+We can classify the existing approaches of  "unsupervised" anomaly/outlier detection based on (at least) two criterias:
 
 - The "contamination" of the training dataset
 
