@@ -49,7 +49,7 @@ So, I argue that the problem of unsupervised fault detection assuming a contamin
 We adopt the same assumptions as the UFDGAN paper, but we tackle the problem of OoDD.
 
 #### Approach: OoDD through GAN's Mode Collapse
-The model is composed of a GAN (generator and a discriminator), along with an encoder. The encoder tries to learn the reverse mapping from the image space to the gan's latent space. The three models are trained jointly. At each iteration, based on the reconstruction error, the top p% samples with biggest reconstruction error (from the real data) are filtered out during training. The idea is to benefit from one of GAN's biggest weaknesses, which is the mode collapse, and as the generator will tend to not generate samples from out of distribution data, filtering samples from the real data through the reconstruction error will enforce the same behavior.
+The model is composed of a GAN (generator and a discriminator), along with an encoder. The encoder tries to learn the reverse mapping from the image space to the gan's latent space. The three models are trained jointly. At each iteration, based on the reconstruction error, the top p% samples with biggest reconstruction error (from the real data) are filtered out during training (only for that particular iteration). The idea is to benefit from one of GAN's biggest weaknesses, which is the mode collapse, and as the generator will tend to not generate samples from out of distribution data, filtering samples from the real data through the reconstruction error will enforce the same behavior.
 
 <p align="center">
 <img src="assets/model.JPG" alt="drawing" width="50%" height="50%"/>
